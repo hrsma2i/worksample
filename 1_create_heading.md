@@ -73,12 +73,11 @@
 ### write
 
 ## 標準module
+### moduleとは
 ### import
 ### math
 ### random
 ### datetime
-### os
-### glob
 
 ## データ構造
 ### tuple
