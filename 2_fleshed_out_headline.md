@@ -38,6 +38,7 @@ takahashi = Student(176, 'takahashi')
 l1 = [sato, sasaki, takahashi]
 
 # l1を身長順に並べ替え
+l2 = sorted(l1, key=lambda s:s.height)
 # sorted関数とは
 # 引数: list
 # 返り値: 受け取ったlistの中身が数値なら昇順、文字列なら辞書順に並べ替えたlist
@@ -50,7 +51,6 @@ l1 = [sato, sasaki, takahashi]
 # 下の例では、l1の要素であるStudentオブジェクトに、
 # lamda式で定義した関数を施すことにより、
 # 各Studentのheightの値によって昇順にならべかえられたlistがl2に格納されている。
-l2 = sorted(l1, key=lambda s:s.height)
 
 # 身長順に表示
 for student in l2:
