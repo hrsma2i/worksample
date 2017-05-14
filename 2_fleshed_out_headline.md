@@ -5,7 +5,7 @@
 以下は「xとyを受け取り、xの2乗にyを足した値を返す」関数を、今まで通りdefを用いて定義したコードになります。
 ```python
 def f(x, y):
-	return x**2 + y
+    return x**2 + y
 ```
 #### いつ使うかの例
 ##### sortedのkey
