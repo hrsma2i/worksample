@@ -48,9 +48,11 @@ l2 = sorted(l1, key=lambda s:s.height)
 # 引数で与えられたlistの要素を並べ替えるときに、
 # 各要素にその関数が施され、その返り値の値によって並べ替えが行われる。
 #
-# 下の例では、l1の要素であるStudentオブジェクトに、
+# 上の例では、l1の要素であるStudentオブジェクトに、
 # lamda式で定義した関数を施すことにより、
 # 各Studentのheightの値によって昇順にならべかえられたlistがl2に格納されている。
+# 
+# e.g. satoに与えたlamda式を施すと、sato.heigtの172を見て、sortedが並べ替えを行う
 
 # 身長順に表示
 for student in l2:
