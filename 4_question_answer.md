@@ -40,18 +40,18 @@
 -->
 <img src="http://latex.codecogs.com/svg.latex?\begin{array}{cccc}&space;&&space;{y_1&space;-&space;f(x_1)}&space;&&space;&plus;&space;&&space;{y_2&space;-&space;f(x_2)}\\&space;=&&space;{y_1&space;-&space;(-x_1&plus;1)}&space;&&space;&plus;&space;&&space;{y_2&space;-&space;(-x_2&plus;1)}\\&space;=&&space;{0&space;-&space;(-1&plus;1)}&space;&&space;&plus;&space;&&space;{1&space;-&space;(-0&plus;1)}\\&space;=&&space;0&space;&&space;&plus;&space;&&space;0&space;\\&space;=&&space;0&space;&&space;&&space;\end{array}" title="\begin{array}{cccc} & {y_1 - f(x_1)} & + & {y_2 - f(x_2)}\\ =& {y_1 - (-x_1+1)} & + & {y_2 - (-x_2+1)}\\ =& {0 - (-1+1)} & + & {1 - (-0+1)}\\ =& 0 & + & 0 \\ =& 0 & & \end{array}" />
 
-どちらのparameterでも、損失関数の値は同じ0なので、どちらも同じくらい予測できているmodelということになってしまいます。
+どちらのparameterでも、**損失関数の値は同じ0なので、どちらも同じくらい予測できている**modelということになってしまいます。
 
 しかし、
-1. のとき、それぞれの誤差は1, -1
-2. のとき、それぞれの誤差は0, 0
+1. のとき、**それぞれの誤差は1, -1**
+2. のとき、**それぞれの誤差は0, 0**
 
 であり、2.の方が良いmodelだということは明らかです。
 
-なぜ、このようなことが起きるかというと、1.では、最後の誤差の足し合わせで、誤差どうしが正負で相殺されてしまっているからです。
+なぜ、このようなことが起きるかというと、1.では、最後の誤差の足し合わせで、**誤差どうしが正負で相殺**されてしまっているからです。
 
-そこで、各誤差を2乗することにより、
-1. y=xのとき
+そこで、**各誤差を2乗**することにより、
+1. のとき
 <!--
 \begin{array}{cccc}
 	& (-1)^2 & + & 1^2 \\
@@ -61,7 +61,7 @@
 -->
 <img src="http://latex.codecogs.com/svg.latex?\begin{array}{cccc}&space;&&space;(-1)^2&space;&&space;&plus;&space;&&space;1^2&space;\\&space;=&&space;1&space;&&space;&plus;&space;&&space;1&space;\\&space;=&&space;2&space;&&space;&&space;\end{array}" title="\begin{array}{cccc} & (-1)^2 & + & 1^2 \\ =& 1 & + & 1 \\ =& 2 & & \end{array}" />
 
-2. y=-x+1のとき
+2. のとき
 <!--
 \begin{array}{cccc}
 	& 0^2 & + & 0^2 \\
@@ -70,7 +70,7 @@
 -->
 <img src="http://latex.codecogs.com/svg.latex?\begin{array}{cccc}&space;&&space;0^2&space;&&space;&plus;&space;&&space;0^2&space;\\&space;=&&space;0&space;&&space;&&space;\end{array}" title="\begin{array}{cccc} & 0^2 & + & 0^2 \\ =& 0 & & \end{array}" />
 
-となり、1.より2.の方が良いmodelである、と正当に評価できます。なお、損失関数は観測値と予測値がどれくらい離れているかを表せればいいので、負の誤差を正としてカウントしても大丈夫なのです。
+となり、**1.より2.の方が良いmodelである、と正当に評価**できます。なお、損失関数は観測値と予測値がどれくらい離れているかを表せればいいので、負の誤差を正としてカウントしても大丈夫なのです。
 
 最終的な答えは、**2乗しないと、誤差の正負で相殺が起き、損失関数がmodelの良し悪しを適切に測ることができなくなるから**です。
 
