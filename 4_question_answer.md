@@ -1,9 +1,9 @@
-```math
+$$
 \begin{eqnarray}
 4a &=& ((a+a)+a)+a \\
 &=& (a+a)+(a+a)
 \end{eqnarray}
-```
+$$
 
 最小二乗法についてのご質問に回答させていただきます。
 
