@@ -80,9 +80,9 @@
 
 >・なぜ最後に,2で割っているのか
 
-損失関数をコンピュータで最小化させるには、勾配降下法というアルゴリズムを使うことが多いです。
+損失関数をコンピュータで最小化させるには、**勾配降下法**というアルゴリズムを使うことが多いです。
 
-このアルゴリズムを使う際に、損失関数の微分係数を扱う場面がでてきます。（詳しくは、勾配降下法のところで学んでください。）
+このアルゴリズムを使う際に、**損失関数の微分係数を扱う**場面がでてきます。（詳しくは、勾配降下法のところで学んでください。）
 
 モデルを`y=w*x+b`とした場合、損失関数のparameter wでの微分係数は、
 <!--
@@ -96,7 +96,7 @@
 -->
 <img src="http://latex.codecogs.com/svg.latex?\begin{array}{rl}&space;&&space;\frac{\partial}{\partial&space;w}&space;\frac{1}{2}&space;\sum_{i}&space;\{y_i&space;-&space;f(x_i)\}^2\\&space;=&&space;\frac{1}{2}&space;\sum_{i}&space;\frac{\partial}{\partial&space;w}&space;\{y_i&space;-&space;(wx_i&plus;b)\}^2\\&space;=&&space;\frac{1}{2}&space;\sum_{i}&space;2&space;\{y_i&space;-&space;(wx_i&plus;b)\}&space;\cdot\frac{\partial}{\partial&space;w}&space;\{y_i&space;-&space;(wx_i&plus;b)\}\\&space;=&&space;{\bf&space;\frac{1}{2}&space;\cdot&space;2}&space;\sum_{i}&space;\{y_i&space;-&space;(wx_i&plus;b)\}&space;\cdot&space;(-x_i)\\&space;=&&space;\sum_{i}&space;\{(wx_i&plus;b)-y_i\}&space;\cdot&space;x_i&space;\end{array}" title="\begin{array}{rl} & \frac{\partial}{\partial w} \frac{1}{2} \sum_{i} \{y_i - f(x_i)\}^2\\ =& \frac{1}{2} \sum_{i} \frac{\partial}{\partial w} \{y_i - (wx_i+b)\}^2\\ =& \frac{1}{2} \sum_{i} 2 \{y_i - (wx_i+b)\} \cdot\frac{\partial}{\partial w} \{y_i - (wx_i+b)\}\\ =& {\bf \frac{1}{2} \cdot 2} \sum_{i} \{y_i - (wx_i+b)\} \cdot (-x_i)\\ =& \sum_{i} \{(wx_i+b)-y_i\} \cdot x_i \end{array}" />
 
-となり、途中で2が出てきますが、1/2をかけておくことによって、それがキャンセルされ、微分係数が単純な形になります。微分係数が単純になると、計算しやすくなります。
+となり、途中で2が出てきますが、1/2をかけておくことによって、それがキャンセルされ、微分係数が単純な形になります。微分係数が単純になると、最小化の計算が楽になります。
 
 さらに、損失関数Eを正の数aで定数倍した関数aEの値は、もとの損失関数の値の大小関係と同じです。(E'=aEが単調増加のため)
 
