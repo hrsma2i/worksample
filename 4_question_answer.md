@@ -84,7 +84,24 @@
 
 このアルゴリズムを使う際に、損失関数の微分係数を扱う場面がでてきます。（詳しくは、勾配降下法のところで学んでください。）
 
-モデルをy=ax+bとした場合、損失関数のparameter aでの微分係数は、
-```math
-\fraq{\partial}{\partial a} \sum_{i} \{\hat{y}\}
-```
+モデルを`y=w*x+b`とした場合、損失関数のparameter wでの微分係数は、
+<!--
+\begin{array}{rl}
+	& \frac{\partial}{\partial w} \frac{1}{2} \sum_{i} \{y_i - f(x_i)\}^2\\
+	=& \frac{1}{2} \sum_{i} \frac{\partial}{\partial w}  \{y_i - (wx_i+b)\}^2\\
+	=& \frac{1}{2} \sum_{i} 2 \{y_i - (wx_i+b)\} \cdot\frac{\partial}{\partial w}  \{y_i - (wx_i+b)\}\\
+	=& {\bf \frac{1}{2} \cdot 2}  \sum_{i} \{y_i - (wx_i+b)\} \cdot (-x_i)\\
+	=& \sum_{i} \{(wx_i+b)-y_i\} \cdot x_i
+\end{array}
+-->
+<img src="http://latex.codecogs.com/svg.latex?\begin{array}{rl}&space;&&space;\frac{\partial}{\partial&space;w}&space;\frac{1}{2}&space;\sum_{i}&space;\{y_i&space;-&space;f(x_i)\}^2\\&space;=&&space;\frac{1}{2}&space;\sum_{i}&space;\frac{\partial}{\partial&space;w}&space;\{y_i&space;-&space;(wx_i&plus;b)\}^2\\&space;=&&space;\frac{1}{2}&space;\sum_{i}&space;2&space;\{y_i&space;-&space;(wx_i&plus;b)\}&space;\cdot\frac{\partial}{\partial&space;w}&space;\{y_i&space;-&space;(wx_i&plus;b)\}\\&space;=&&space;{\bf&space;\frac{1}{2}&space;\cdot&space;2}&space;\sum_{i}&space;\{y_i&space;-&space;(wx_i&plus;b)\}&space;\cdot&space;(-x_i)\\&space;=&&space;\sum_{i}&space;\{(wx_i&plus;b)-y_i\}&space;\cdot&space;x_i&space;\end{array}" title="\begin{array}{rl} & \frac{\partial}{\partial w} \frac{1}{2} \sum_{i} \{y_i - f(x_i)\}^2\\ =& \frac{1}{2} \sum_{i} \frac{\partial}{\partial w} \{y_i - (wx_i+b)\}^2\\ =& \frac{1}{2} \sum_{i} 2 \{y_i - (wx_i+b)\} \cdot\frac{\partial}{\partial w} \{y_i - (wx_i+b)\}\\ =& {\bf \frac{1}{2} \cdot 2} \sum_{i} \{y_i - (wx_i+b)\} \cdot (-x_i)\\ =& \sum_{i} \{(wx_i+b)-y_i\} \cdot x_i \end{array}" />
+
+となり、途中で2が出てきますが、1/2をかけておくことによって、それがキャンセルされ、微分係数が単純な形になります。微分係数が単純になると、計算しやすくなります。
+
+さらに、損失関数Eを正の数aで定数倍した関数aEの値は、もとの損失関数の値の大小関係と同じです。(E'=aEが単調増加のため)
+
+よって、aEを最小化するparamterは、元の損失関数Eも最大化します。なので、ある損失関数を正の定数倍したものはすべて、損失関数として扱えます。
+
+最終的な答えは、
+- 1/2をかけておくと、**損失関数の微分係数が単純な形になるから**で、
+- **損失関数を正の定数倍した関数も、損失関数として扱える**ので大丈夫です。
