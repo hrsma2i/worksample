@@ -11,7 +11,7 @@
 (input, label): (1,0),(0,1)
 
 線形回帰だとすると、損失関数は以下のようになります。
-1.<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;y=x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;y=x" title="y=x" /></a> のとき
+1. <img src="https://latex.codecogs.com/svg.latex?2x_1&space;&plus;&space;x_2&space;&&space;=&space;&&space;5&space;\\&space;2x_2&space;&&space;=&space;&&space;2&space;\\&space;x_4&space;&&space;=&space;&&space;5" title="2x_1 + x_2 & = & 5 \\ 2x_2 & = & 2 \\ x_4 & = & 5" />
 ```math
 {0 - (1*1+0)} + {1 - (1*0+0)}
 = -1 + 1 = 0
