@@ -11,19 +11,11 @@
 (input, label): (1,0),(0,1)
 
 線形回帰だとすると、損失関数は以下のようになります。
-1. <img src="https://latex.codecogs.com/svg.latex?2x_1&space;&plus;&space;x_2&space;&&space;=&space;&&space;5&space;\\&space;2x_2&space;&&space;=&space;&&space;2&space;\\&space;x_4&space;&&space;=&space;&&space;5" title="2x_1 + x_2 & = & 5 \\ 2x_2 & = & 2 \\ x_4 & = & 5" />
-```math
-{0 - (1*1+0)} + {1 - (1*0+0)}
-= -1 + 1 = 0
-```
+1. y=xのとき
+<img src="http://latex.codecogs.com/svg.latex?\begin{array}{rcl}&space;&&space;&&space;{0&space;-&space;(1*1&plus;0)}&space;&plus;&space;{1&space;-&space;(1*0&plus;0)}&space;\\&space;&=&&space;-1&space;&plus;&space;1&space;\\&space;&=&&space;0&space;\end{array}" title="\begin{array}{rcl} & & {0 - (1*1+0)} + {1 - (1*0+0)} \\ &=& -1 + 1 \\ &=& 0 \end{array}" />
 
 2. y=-x+1のとき
-
-```math```
-{0 - (-1*1+1)} + {1 - (-1*0+1)}
-= 0 + 0 = 0
-
-```
+<img src="http://latex.codecogs.com/svg.latex?\begin{array}{rcl}&space;&&space;&&space;{0&space;-&space;(-1*1&plus;1)}&space;&plus;&space;{1&space;-&space;(-1*0&plus;1)}&space;\\&space;&=&&space;0&space;&plus;&space;0&space;\\&space;&=&&space;0&space;\end{array}" title="\begin{array}{rcl} & & {0 - (-1*1+1)} + {1 - (-1*0+1)} \\ &=& 0 + 0 \\ &=& 0 \end{array}" />
 
 どちらのparamterでも、損失関数の値は同じなので、どちらも同じくらい予測できているmodelということになってしまいます。
 
