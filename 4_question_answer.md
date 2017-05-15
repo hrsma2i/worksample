@@ -17,26 +17,21 @@
 2. y=-x+1のとき
 <img src="http://latex.codecogs.com/svg.latex?\begin{array}{rcl}&space;&&space;&&space;{0&space;-&space;(-1*1&plus;1)}&space;&plus;&space;{1&space;-&space;(-1*0&plus;1)}&space;\\&space;&=&&space;0&space;&plus;&space;0&space;\\&space;&=&&space;0&space;\end{array}" title="\begin{array}{rcl} & & {0 - (-1*1+1)} + {1 - (-1*0+1)} \\ &=& 0 + 0 \\ &=& 0 \end{array}" />
 
-どちらのparamterでも、損失関数の値は同じなので、どちらも同じくらい予測できているmodelということになってしまいます。
+どちらのparameterでも、損失関数の値は同じなので、どちらも同じくらい予測できているmodelということになってしまいます。
 
 しかし、
 1. のとき、それぞれの誤差は1, -1
 2. のとき、それぞれの誤差は0, 0
+
 であり、2.の方が良いmodelだということは明らかです。
 
 なぜ、このようなことが起きるかというと、1.では、最後の誤差の足し合わせで、誤差どうしが正負で相殺されてしまっているからです。
 
 そこで、各誤差を2乗することにより、
 1. y=xのとき
-```math
-(-1)^2 + 1^2 = 1 + 1 = 2
-```
-
+<img src="http://latex.codecogs.com/svg.latex?\begin{array}{rcl}&space;&&space;&&space;(-1)^2&space;&plus;&space;1^2&space;\\&space;&&space;=&space;&&space;1&space;&plus;&space;1&space;\\&space;&&space;=&space;&&space;2&space;\end{array}" title="\begin{array}{rcl} & & (-1)^2 + 1^2 \\ & = & 1 + 1 \\ & = & 2 \end{array}" />
 2. y=-x+1のとき
-
-```math```
-0^2 + 0^2 = 0
-```
+<img src="http://latex.codecogs.com/svg.latex?\begin{array}{rcl}&space;&&space;&&space;0^2&space;&plus;&space;0^2&space;\\&space;&&space;=&space;&&space;0&space;\end{array}" title="\begin{array}{rcl} & & 0^2 + 0^2 \\ & = & 0 \end{array}" />
 
 となり、1.より2.の方が良いmodelである、と正当に評価できます。なお、損失関数は観測値と予測値がどれくらい離れているかを表せればいいので、負の誤差を正としてカウントしても大丈夫なのです。
 
