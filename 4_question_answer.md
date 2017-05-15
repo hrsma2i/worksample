@@ -8,7 +8,7 @@
 
 以下の2つのtraining dataにfitするmodelを考えます。
 
-(input, label): (1,0),(0,1)
+<img src="http://latex.codecogs.com/svg.latex?\begin{array}{rcl}&space;(x_1,y_1)&space;=&space;(1,0)\\&space;(x_2,y_2)&space;=&space;(0,1)&space;\end{array}" title="\begin{array}{rcl} (x_1,y_1) = (1,0)\\ (x_2,y_2) = (0,1) \end{array}" />
 
 線形回帰だとすると、損失関数は以下のようになります。
 1. y=xのとき
