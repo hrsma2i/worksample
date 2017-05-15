@@ -30,6 +30,6 @@ selfはインスタンス自身を指すので、この例では、**selfはmy_c
 
 `my_car.run(2)`を実行すると、`self.position += self.speed * time`が実行されますが、このselfが`my_car`自身(self)になります。
 
-なのでrunによって、`my_car`自身の位置`my_car.position`に、(`my_car`自身の速さ`my_car.speed`)×走行時間time = 走行距離が足されていることがわかります。
+つまり、`my_car.position += my_car.speed * time`が実行されていることになります。
 
 以上のように、**selfはインスタンスオブジェクト自身**を指し、class内でそのインスタンスを呼び出す際にselfと記述します。
