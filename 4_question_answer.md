@@ -7,12 +7,26 @@
 なぜ2乗しているか、を理解する上で、2乗しなかったらどうなるか、を考えます。
 
 以下の2つのtraining dataにfitするmodelを考えます。
-
+<!--
+\begin{array}{rcl}
+	(x_1,y_1) = (1,0)\\
+	(x_2,y_2) = (0,1)
+\end{array}
+-->
 <img src="http://latex.codecogs.com/svg.latex?\begin{array}{rcl}&space;(x_1,y_1)&space;=&space;(1,0)\\&space;(x_2,y_2)&space;=&space;(0,1)&space;\end{array}" title="\begin{array}{rcl} (x_1,y_1) = (1,0)\\ (x_2,y_2) = (0,1) \end{array}" />
 
 線形回帰だとすると、損失関数は以下のようになります。
 1. y=xのとき
-<img src="http://latex.codecogs.com/svg.latex?\begin{array}{rcl}&space;&&space;&&space;{0&space;-&space;(1*1&plus;0)}&space;&plus;&space;{1&space;-&space;(1*0&plus;0)}&space;\\&space;&=&&space;-1&space;&plus;&space;1&space;\\&space;&=&&space;0&space;\end{array}" title="\begin{array}{rcl} & & {0 - (1*1+0)} + {1 - (1*0+0)} \\ &=& -1 + 1 \\ &=& 0 \end{array}" />
+<!--
+\begin{array}{cccc}
+	& {y_1 - \hat{y}(x_1)} & + & {y_2 - \hat{y}(x_2)}\\
+	=& {y_1 - x_1} & + & {y_2 - x_2}\\
+	=& {0 - 1} & + & {1 - 0}\\
+	=& -1 & + & 1 \\
+	=& 0 & &
+\end{array}
+-->
+<img src="http://latex.codecogs.com/svg.latex?\begin{array}{cccc}&space;&&space;{y_1&space;-&space;\hat{y}(x_1)}&space;&&space;&plus;&space;&&space;{y_2&space;-&space;\hat{y}(x_2)}\\&space;=&&space;{y_1&space;-&space;x_1}&space;&&space;&plus;&space;&&space;{y_2&space;-&space;x_2}\\&space;=&&space;{0&space;-&space;1}&space;&&space;&plus;&space;&&space;{1&space;-&space;0}\\&space;=&&space;-1&space;&&space;&plus;&space;&&space;1&space;\\&space;=&&space;0&space;&&space;&&space;\end{array}" title="\begin{array}{cccc} & {y_1 - \hat{y}(x_1)} & + & {y_2 - \hat{y}(x_2)}\\ =& {y_1 - x_1} & + & {y_2 - x_2}\\ =& {0 - 1} & + & {1 - 0}\\ =& -1 & + & 1 \\ =& 0 & & \end{array}" />
 
 2. y=-x+1のとき
 <img src="http://latex.codecogs.com/svg.latex?\begin{array}{rcl}&space;&&space;&&space;{0&space;-&space;(-1*1&plus;1)}&space;&plus;&space;{1&space;-&space;(-1*0&plus;1)}&space;\\&space;&=&&space;0&space;&plus;&space;0&space;\\&space;&=&&space;0&space;\end{array}" title="\begin{array}{rcl} & & {0 - (-1*1+1)} + {1 - (-1*0+1)} \\ &=& 0 + 0 \\ &=& 0 \end{array}" />
