@@ -1,10 +1,3 @@
-$$
-\begin{eqnarray}
-4a &=& ((a+a)+a)+a \\
-&=& (a+a)+(a+a)
-\end{eqnarray}
-$$
-
 最小二乗法についてのご質問に回答させていただきます。
 
 >・なぜ2乗しているのか
@@ -18,7 +11,7 @@ $$
 (input, label): (1,0),(0,1)
 
 線形回帰だとすると、損失関数は以下のようになります。
-1. $$y=x$$のとき
+1.<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;y=x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;y=x" title="y=x" /></a> のとき
 ```math
 {0 - (1*1+0)} + {1 - (1*0+0)}
 = -1 + 1 = 0
