@@ -66,7 +66,7 @@ l1 = [sato, sasaki, takahashi]
 l2 = sorted(l1, key=lambda s:s.height)
 # sorted関数は、l1を並べ替えるときに、
 # keyで渡した関数をl1の各要素に施した値を見て、並べ替えます。
-# e.g. 
+# e.g. lamdaで定義した関数を、l1の各要素に施すと以下の通り。
 # sato      -> 172
 # sasaki    -> 168
 # takahashi -> 176
