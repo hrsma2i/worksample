@@ -65,7 +65,7 @@ l1 = [sato, sasaki, takahashi]
 # l1を身長順に並べ替え
 l2 = sorted(l1, key=lambda s:s.height)
 # sorted関数は、l1を並べ替えるときに、
-# keyで渡した関数をl1に施した値を見て、並べ替える。
+# keyで渡した関数をl1の各要素に施した値を見て、並べ替えます。
 # e.g. 
 # sato      -> 172
 # sasaki    -> 168
